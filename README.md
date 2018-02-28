@@ -1,17 +1,18 @@
-## Description
-Vue权限验证插件
+# v-auth
 
-## Example
+> vue auth plugin
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
 ```
-import AuthPlugin from './auth.js'
 
-Vue.use(AuthPlugin)
-AuthCode.setAuthCode([AuthCode1, AuthCode2, AuthCode3])
-
-// template auth
-<div v-auth="'AuthCode'"></div>
-<div v-auth="[AuthCode1, AuthCode2]"></div>
-
-// js auth
-this.$auth('AuthCode') // return true if exists
-```
+For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
