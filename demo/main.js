@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-// import authPlugin from '../src'
-import authPlugin from '../dist/vue-authplugin'
+import authPlugin from '../src'
 import authMap from './authMap'
 
 Vue.use(authPlugin, {

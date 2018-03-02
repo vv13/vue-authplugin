@@ -13,5 +13,8 @@ $ npm install vue-authplugin
 <script src="lib/vue-authplugin.js"></script>
 ```
 
+## 开发
+- 开发：`npm run dev`
+- 编译：`npm run build`
+- 打包umd:`npm run build:umd`
 ## 初始化
-
