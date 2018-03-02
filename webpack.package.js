@@ -4,8 +4,8 @@ var webpack = require('webpack')
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, './lib'),
+    publicPath: '/lib/',
     libraryTarget: 'umd',
     library: 'vue-authplugin',
     filename: 'vue-authplugin.js'

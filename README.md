@@ -10,7 +10,8 @@ $ npm install vue-authplugin
 ```
 通过浏览器：
 ```
-<script src="dist/vue-authplugin.js"></script>
+<script src="lib/vue-authplugin.js"></script>
 ```
 
-## 用法
+## 初始化
+
