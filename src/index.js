@@ -4,7 +4,7 @@ let auth
 
 const plugin = {
   install(Vue, options = {}) {
-    const directiveName = options.name || 'auth'
+    const directiveName = options.vName || 'auth'
     auth = new AuthPlugin(options)
     Vue.prototype.$auth = auth.checkAuth
     Vue.directive(directiveName, {
