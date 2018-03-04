@@ -1,24 +1,24 @@
 import AuthPlugin from './authPlugin'
 
-let auth
-
 const plugin = {
   install(Vue, options = {}) {
-    const directiveName = options.vName || 'auth'
-    auth = new AuthPlugin(options)
-    Vue.prototype.$auth = auth.checkAuth
-    Vue.directive(directiveName, {
+    const pluginName = options.name || 'auth'
+    const auth = new AuthPlugin(options)
+
+    Object.defineProperty(Vue.prototype, `$_${pluginName}`, {
+      get () { return auth }
+    })
+
+    Vue.directive(pluginName, {
       bind(el, { value }) {
-        if (!auth.checkAuth(value)) {
+        if (!auth.verify(value)) {
           el.style.display = 'none'
-          el.dataset.auth = 0
+          el.dataset[pluginName] = 'fail'
+        } else {
+          el.dataset[pluginName] = 'success'
         }
-        el.dataset.auth = 1
       },
     })
-  },
-  updateAuthCode(codes) {
-    auth.updateAuthCode(codes)
   },
 }
 
