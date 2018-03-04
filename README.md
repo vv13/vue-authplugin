@@ -1,4 +1,5 @@
 # vue-authplugin
+
 一款用于验证用户权限表是否包含所需权限的Vue插件，它具有以下特性：
 
 1. 核心逻辑不到20行，由es6 class编写，稍微修改即可在其他框架中使用
@@ -12,7 +13,7 @@
 ## 安装
 使用npm：
 ```
-$ npm install git+ssh://git@gitlab.intra.knownsec.com:weixin/vue-auth.git
+$ npm install vue-authplugin
 ```
 
 
@@ -49,7 +50,7 @@ $ npm install git+ssh://git@gitlab.intra.knownsec.com:weixin/vue-auth.git
 
 
 
-#### check(auth)
+#### verify(auth)
 
 - 参数
   - {String | Object | Array} auth
@@ -89,18 +90,16 @@ $ npm install git+ssh://git@gitlab.intra.knownsec.com:weixin/vue-auth.git
 
    若使用this.$_auth.verify验证成功或失败，则会返回true或false；使用指令形式，验证成功，则会在dom方法上添加data-auth="success"属性，验证失败，则会添加data-auth="fail"，并设置display: none。
 
-   ​
-
    使用示例：
 
-    ```
+   ```
     <template>
         <button v-auth="'101'">Login</button>
         <button v-auth="[102, 103]">Submit1</button>
         <button v-auth="'AUTH_SUBMIT'">Submit2</button>
         <button v-if"$_auth.verify({105: true, 106: false})">Fetch</button>
     </template>
-    ```
+   ```
 
 
 
