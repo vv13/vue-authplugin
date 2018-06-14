@@ -3,7 +3,7 @@
   "main": "lib/vue-authplugin.js",
   "module": "src/index.js",
   "description": "vue auth plugin",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "vv13 <zwhvv13@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -20,12 +20,16 @@
     "build:umd": "cross-env NODE_ENV=production webpack --progress --hide-modules --config webpack.umd.js",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
-  "dependencies": {},
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vv13/vue-authplugin"
+  },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
