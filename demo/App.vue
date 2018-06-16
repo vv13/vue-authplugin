@@ -1,32 +1,53 @@
 <template>
   <div id="app">
     authCodes: {{authCode}}
-    <div>
-      <h1 v-auth="'four'">'four', need auth four</h1>
-      <h1 v-if="$_auth.verify(['one', 'four'])">['one', 'four'], need auth one or four</h1>
-      <h1 v-auth="{one: true, five: false}">{one: true, five: false}, need auth one and don't need five</h1>
-      <h1 v-auth="'AUTH_LIST'">
-        [
-          ['one', 'four'],
-          'five',
-          {
-            three: true,
-            four: false,
-          },
-        ],
-      need one or four, or need five, or need three and don't need four</h1>
-    </div>
+    <ul>
+      <li class="wrap">
+        <div class="desc">v-auth="'four'"</div>
+        <div class="circle"></div>
+      </li>
+      <li class="wrap">
+        <div class="desc">v-if="$_auth.verify(['one', 'four'])"</div>
+        <div class="circle" v-if="$_auth.verify(['one', 'four'])"></div>
+      </li>
+      <li class="wrap">
+        <div class="desc">v-auth="{one: true, five: false}"</div>
+        <div class="circle" v-auth="{one: true, five: false}"></div>
+      </li>
+      <li class="wrap">
+        <div class="desc"> v-auth="'oneAlias'"</div>
+        <div class="circle"  v-auth="'oneAlias'"></div>
+      </li>
+      <li class="wrap">
+        <div class="desc"> v-auth="'asdfasdfasdf'"</div>
+        <div class="circle" v-auth="'asdfasdfasdf'"></div>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
+  name: "app",
 
   data() {
     return {
-      authCode: ['one', 'two', 'three', 'four'],
-    }
-  },
-}
+      authCode: ["one", "two", "three", "four"]
+    };
+  }
+};
 </script>
+
+<style>
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: black;
+  }
+
+  .wrap {
+    display: flex;
+    align-items: center;
+  }
+</style>
