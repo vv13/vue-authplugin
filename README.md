@@ -1,6 +1,6 @@
 # vue-authplugin
 [![npm](https://img.shields.io/badge/npm-0.2.3-blue.svg)](https://www.npmjs.com/package/vue-authplugin)
-
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/vv13/vue-authplugin/blob/master/LICENSE)
 
 
 an elegant view auth control plugin, support directive and prototype methods.
