@@ -5,7 +5,7 @@ class AuthPlugin {
     } else if (isType(authCode, 'Map')) {
       return authCode;
     }
-    return new Map()
+    return new Map();
   }
 
   static initAuthMap(authMap) {
@@ -24,8 +24,8 @@ class AuthPlugin {
   }
 
   verify(value) {
-    if (!value || ["{}", "[]"].includes(JSON.stringify(value))) return true;
-    if (typeof value === "string") {
+    if (!value || ['{}', '[]'].includes(JSON.stringify(value))) return true;
+    if (typeof value === 'string') {
       return this.authMap.has(value)
         ? this.verify(this.authMap.get(value))
         : this.authCode.has(value);

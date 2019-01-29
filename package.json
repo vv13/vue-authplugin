@@ -3,7 +3,7 @@
   "main": "lib/vue-authplugin.js",
   "module": "src/index.js",
   "description": "an elegant view auth control plugin",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "author": "vv13 <zwhvv13@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -14,9 +14,7 @@
     "lib"
   ],
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "test": "jest",
-    "build:umd": "cross-env NODE_ENV=production webpack --progress --hide-modules --config webpack.umd.js",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "browserslist": [
@@ -28,24 +26,21 @@
     "type": "git",
     "url": "https://github.com/vv13/vue-authplugin"
   },
-  "dependencies": {},
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-jest": "^23.0.1",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-3": "^6.24.1",
-    "cross-env": "^5.0.5",
-    "css-loader": "^0.28.7",
-    "file-loader": "^1.1.4",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
+    "cross-env": "^5.2.0",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
     "html-webpack-plugin": "^2.30.1",
-    "jest": "^23.1.0",
+    "jest": "^24.0.0",
     "regenerator-runtime": "^0.11.1",
-    "vue": "^2.5.13",
-    "vue-loader": "^13.0.5",
-    "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "vue": "^2.5.22",
+    "vue-loader": "^13.7.3",
+    "vue-template-compiler": "^2.5.22",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
   },
   "jest": {
     "transform": {
