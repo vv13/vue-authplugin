@@ -6,13 +6,13 @@
 an elegant view auth control plugin, support directive and prototype methods.
 
 ## Installation
-```
+```sh
 $ npm install vue-authplugin
 ```
 
 ## Demo
 
-```
+```js
 import authPlugin from 'vue-authplugin'
 
 Vue.use(authPlugin, {
@@ -24,7 +24,7 @@ Vue.use(authPlugin, {
 })
 ```
 after init, we can use directives or methods in template:
-```
+```vue
 <template>
   <!-- show Login btn if 101 is exists -->
   <button v-auth="'101'">Login</button>
