@@ -1,4 +1,4 @@
-import AuthPlugin, { IOptions, Code } from './authPlugin'
+import AuthPlugin, { IOptions, Code } from 'permission-list'
 
 interface IInstallOptions extends IOptions {
   name?: string
