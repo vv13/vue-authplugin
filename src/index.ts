@@ -16,7 +16,7 @@ const plugin = {
 
     Vue.directive(pluginName, {
       bind(el: HTMLElement, { value }: { value: Code }) {
-        if (!auth.verify(value)) {
+        if (!auth.check(value)) {
           el.style.display = 'none'
           el.dataset[pluginName] = 'fail'
         } else {
@@ -32,3 +32,4 @@ if (typeof window !== 'undefined' && (window as any).Vue) {
 }
 
 export default plugin
+export { AuthPlugin, Code }
